@@ -137,12 +137,14 @@ def process_smbclient_default_credentials(ip):
 
 if __name__ == "__main__":
     parser = ap.ArgumentParser(formatter_class=RawTextHelpFormatter)
-    parser.add_argument("-d", "--domain", required=True, type=str, help='Domain name: example.com')
-    parser.add_argument("-skip-nmap", "--skip-nmap", required=False, default=False, action='store_true', help='Skip nmap scan')
-    parser.add_argument("-i", "--ip", required=True, type=str, help='IP address.')
-    parser.add_argument("-u", "--udp", required=False, action='store_true', default=False, help='Perform UDP scans.')
-    parser.add_argument("-nmap-level", "--nmap-level", required=False, type=int, default=1, help='Nmap scan level. 1-3')
-    parser.add_argument("-o", "--output", required=False, type=str, help='Output file.')
+    required = parser.add_argument_group('required arguments')
+    optional = parser.add_argument_group('optional arguments')
+    required.add_argument("-d", "--domain", required=True, type=str, help='Domain name: example.com')
+    required.add_argument("-i", "--ip", required=True, type=str, help='IP address.')
+    optional.add_argument("-skip-nmap", "--skip-nmap", required=False, default=False, action='store_true', help='Skip nmap scan')
+    optional.add_argument("-u", "--udp", required=False, action='store_true', default=False, help='Perform UDP scans.')
+    optional.add_argument("-nmap-level", "--nmap-level", required=False, type=int, default=1, help='Nmap scan level. 1-3')
+    optional.add_argument("-o", "--output", required=False, type=str, help='Output file.')
     args = parser.parse_args()
     
     # Args
