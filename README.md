@@ -1,8 +1,11 @@
-# OH LA D
+<div align="center">
+<img height="350px" src="https://user-images.githubusercontent.com/28403617/176711745-5f48365d-ab9f-427e-9218-94f44b81d965.svg#gh-light-mode-only">
+<img height="350px" src="https://user-images.githubusercontent.com/28403617/176711750-dafd4103-d60a-4ceb-b4d6-2c1e4f49ad47.svg#gh-dark-mode-only">
+</div>
 
-## Description
+# Description
 
-#### 🇫🇷
+## 🇫🇷
 
 `ohlad` est un script qui permet de faire de la reconnaissance sur des systèmes d'active directory (Windows AD).
 Le script se base sur des commandes déjà existantes, type `nmap`, `smbmap`, `enum4linux` etc.
@@ -15,7 +18,7 @@ Le script est capable de:
 - Rechercher des informations via les protocoles LDAP et SMB.
 
 
-#### 🇺🇸
+## 🇺🇸
 
 `ohlad` is a script that allows to do recon on active directory systems (Windows AD).
 The script is based on existing commands, such as `nmap`, `smbmap`, `enum4linux` etc.
@@ -28,7 +31,7 @@ The script is able to:
 - Search information LDAP and SMB protocols.
 
 
-## Usage
+# Usage
 
 ```
 usage: sudo python3 ohlad.py [-h] -d DOMAIN -i IP [-skip-nmap] [-u]
@@ -52,7 +55,7 @@ optional arguments:
                         Output file.
 ```
 
-## Example
+# Example
 
 ```
 sudo python3 ohlad.py -i 10.10.11.23 -d domain.com
