@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 class bcolors:
     HEADER = '\033[95m'
@@ -12,7 +13,23 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def command_exists(command):
+    '''
+        Check if a command exists.
+    '''
     return subprocess.call("type " + command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) == 0
 
 def display_title(title):
+    '''
+        Display a title in yellow color.
+    '''
     print(f"{bcolors.WARNING}\n\n> {title}\n\n{bcolors.ENDC}")
+    
+def safe_open_w(path):
+    '''
+      Open "path" for writing, creating any parent directories as needed.
+    '''
+    if '/' in path:
+        dir = os.path.dirname(path)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+    return open(path, 'w')
