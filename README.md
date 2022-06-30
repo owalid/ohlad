@@ -7,7 +7,7 @@
 
 ## 🇫🇷
 
-`ohlad` est un script qui permet de faire de la reconnaissance sur des systèmes d'active directory (Windows AD).
+`ohlad` est un script permettant de faire de la reconnaissance sur des systèmes de type `active directory` (Windows AD).
 Le script se base sur des commandes déjà existantes, type `nmap`, `smbmap`, `enum4linux` etc.
 
 Le script est capable de:
@@ -20,7 +20,7 @@ Le script est capable de:
 
 ## 🇺🇸
 
-`ohlad` is a script that allows to do recon on active directory systems (Windows AD).
+`ohlad` is a script that allows to do recon on `active directory` systems (Windows AD).
 The script is based on existing commands, such as `nmap`, `smbmap`, `enum4linux` etc.
 
 The script is able to:
